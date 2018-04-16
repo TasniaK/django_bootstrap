@@ -1,0 +1,16 @@
+#myContainer {
+    width: 400px;
+    height: 400px;
+    position: relative;
+    background: #1cecf5;
+}
+#myAnimation {
+    color: #e61818;
+    height: 2rem;
+    width: 2rem;
+    display: block;
+    line-height: 1.5rem;
+    font-size: 2rem;
+    text-shadow: 1px 1px;
+    position: absolute;
+}

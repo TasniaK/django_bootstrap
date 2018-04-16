@@ -12,9 +12,9 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 
 import os
 
+# base_dir, takes an absolute file name, gets the directory name of that file, and again
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
@@ -51,6 +51,7 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'app.urls'
 
+# template directory, os.path.join joins file names to base_dir to get the full pathway
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -117,4 +118,13 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
+# static_url states url prefix for all static files
+# static_root is where static files are collected to (from staticfiles_dirs)
+# static_root is more useful when there is more that one app with a dir for each static file per app.
+# staticfiles_dirs is where all static file pathways are stored
 STATIC_URL = '/static/'
+STATIC_ROOT = ''
+STATICFILES_DIRS = (
+    # same logic as using base_dir
+    os.path.join(BASE_DIR, 'static/'),
+)

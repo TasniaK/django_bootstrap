@@ -14,10 +14,17 @@ Including another URLconf
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
 from django.conf.urls import include, url
+from django.conf import settings
+from django.conf.urls.static import static
 from django.contrib import admin
 
+# mysite url pattern, adds no prefix to mysite urls (such as index url)
+# for admin urls, they get added with the 'admin/ prefix'
+# make sure admin url pattern is first as it is more specific regex than mysite url pattern
+# static bit makes django return the images etc.
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'', include('mysite.urls')),
 
-]
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+

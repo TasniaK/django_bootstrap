@@ -4,6 +4,8 @@ from django.views import View
 
 # generic views ListView and DetailView used here
 # template_name specified to prevent Django using a default template
+# get request is faster than post requests but not used for secure data
+# get request gives you what you request: matches address to a view, and view returns a html page
 
 
 class IndexView(View):
