@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,15 +12,15 @@
     <title>Tasnia Kamal</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{% static "vendor/bootstrap/css/bootstrap.min.css" %}" rel="stylesheet">
 
     <!-- Custom Fonts -->
-    <link href="static/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="{% static "vendor/font-awesome/css/font-awesome.min.css" %}" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
-    <link href="static/vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
+    <link href="{% static "vendor/simple-line-icons/css/simple-line-icons.css" %}" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="static/css/stylish-portfolio.css" rel="stylesheet">
+    <link href="{% static "css/stylish-portfolio.css" %}" rel="stylesheet">
 
   </head>
 
@@ -123,7 +124,7 @@
                   <p class="mb-0">An example of classes and polymorphism</p>
                 </span>
               </span>
-              <img class="img-portfolio" src="static/img/portfolio-bank.jpg" alt="bank account">
+              <img class="img-portfolio" src="{% static "img/portfolio-bank.jpg" %}" alt="bank account">
             </a>
           </div>
           <div class="col-lg-6">
@@ -134,7 +135,7 @@
                   <p class="mb-0">A data science project in progress</p>
                 </span>
               </span>
-              <img class="img-portfolio" src="static/img/portfolio-titanic.png" alt="data science titanic project">
+              <img class="img-portfolio" src="{% static "img/portfolio-titanic.png" %}" alt="data science titanic project">
             </a>
           </div>
           <div class="col-lg-6">
@@ -145,7 +146,7 @@
                   <p class="mb-0">A focus on backend development using Django to create a web-poll application</p>
                 </span>
               </span>
-              <img class="img-portfolio" src="static/img/portfolio-polls1.png" alt="first website using django">
+              <img class="img-portfolio" src="{% static "img/portfolio-polls1.png" %}" alt="first website using django">
             </a>
           </div>
           <div class="col-lg-6">
@@ -156,7 +157,7 @@
                   <p class="mb-0">A focus on css and html using a bootstrap template</p>
                 </span>
               </span>
-              <img class="img-portfolio" src="static/img/portfolio-bootstrap-site.png" alt="this website">
+              <img class="img-portfolio" src="{% static "img/portfolio-bootstrap-site.png" %}" alt="this website">
             </a>
           </div>
         </div>
@@ -174,7 +175,7 @@
         <div class="row">
           <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
             <span class="service-icon rounded-circle mx-auto mb-3">
-                <a class="disso-3rd" href="static/chem_files/3rd-year-disso.pdf"><i class="fa fa-flask"></i></a>
+                <a class="disso-3rd" href="{% static "chem_files/3rd-year-disso.pdf" %}"><i class="fa fa-flask"></i></a>
             </span>
             <h4>
               <strong>3<sup>rd</sup> Year Dissertation</strong>
@@ -183,7 +184,7 @@
           </div>
           <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
             <span class="service-icon rounded-circle mx-auto mb-3">
-                <a class="disso-msci" href="static/chem_files/msci-disso.pdf"><i class="fa fa-graduation-cap"></i></a>
+                <a class="disso-msci" href="{% static "chem_files/msci-disso.pdf" %}"><i class="fa fa-graduation-cap"></i></a>
             </span>
             <h4>
               <strong>MSci Dissertation</strong>
@@ -192,7 +193,7 @@
           </div>
           <div class="col-lg-3 col-md-6 mb-5 mb-md-0">
             <span class="service-icon rounded-circle mx-auto mb-3">
-                <a class="poster-msci" href="static/chem_files/msci-poster.pdf"><i class="fa fa-picture-o"></i></a>
+                <a class="poster-msci" href="{% static "chem_files/msci-poster.pdf" %}"><i class="fa fa-picture-o"></i></a>
             </span>
             <h4>
               <strong>MSci Project Poster</strong>
@@ -236,14 +237,14 @@
     </a>
 
     <!-- Bootstrap core JavaScript -->
-    <script src="static/vendor/jquery/jquery.min.js"></script>
-    <script src="static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="{% static "vendor/jquery/jquery.min.js" %}"></script>
+    <script src="{% static "vendor/bootstrap/js/bootstrap.bundle.min.js" %}"></script>
 
     <!-- Plugin JavaScript -->
-    <script src="static/vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="{% static "vendor/jquery-easing/jquery.easing.min.js" %}"></script>
 
     <!-- Custom scripts for this template -->
-    <script src="static/js/stylish-portfolio.min.js"></script>
+    <script src="{% static "js/stylish-portfolio.min.js" %}"></script>
 
   </body>
 
