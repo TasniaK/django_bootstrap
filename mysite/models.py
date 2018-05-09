@@ -1,5 +1,6 @@
 # Create your models here.
 # Models are databases
+# Each data type in the project needs a model
 # Configure models by creating subclass of AppConfig class in apps.py
 # Activate models by adding module dotted path for MysiteConfig to INSTALLED_APPS in settings.py
 # Use python manage.py makemigrations to store changes to the model as a migration
@@ -18,9 +19,16 @@ from django.db import models
 
 class Page(models.Model):
     title_text = models.CharField(max_length=30)
+    # tagline_text
+    # section_title
+    # section_text
+    # section_background
+    # section_button
+    # section
     intro_text = models.TextField()
-    #page_image =
-    #background =
+    # page_image =
+    # background =
+
 
     def __str__(self):
         return self.title_text
