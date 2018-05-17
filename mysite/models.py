@@ -39,8 +39,9 @@ class Section(models.Model):
         return self.scroll_button
 
 class Page(models.Model):
-    header = models.ForeignKey(Section, on_delete = models.CASCADE)
+    section_header = models.ForeignKey(Section, on_delete = models.CASCADE, default=1)
+
     # external_links
 
     def __str__(self):
-        return self.header
+        return self.section_header

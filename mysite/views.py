@@ -3,7 +3,7 @@ from django.shortcuts import render
 from django.views import View
 from django.core.exceptions import ObjectDoesNotExist
 
-from .models import Page
+from .models import Page, Section
 
 
 # each page needs a view
@@ -28,3 +28,15 @@ class IndexView(View):
             page_data = {}
 
         return render(request, self.template_name, page_data)
+
+    def get(self, request):
+        # use try and except to quickly skip to an empty page if get(id=1) errors (does not exist)
+        try:
+            # use id=1 as this is first page instance so id=1
+            # .__dict__ makes Page instance into dictionary as loaded page expects a dictionary not Page instance
+            section_data = Section.objects.get(id=1).__dict__
+        # ObjectDoesNotExist is a django exception
+        except ObjectDoesNotExist:
+            section_data = {}
+
+        return render(request, self.template_name, section_data)
