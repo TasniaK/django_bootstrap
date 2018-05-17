@@ -38,7 +38,10 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='page',
             name='section_header',
-            field=models.ForeignKey(default='Tasnia Kamal', on_delete=django.db.models.deletion.CASCADE, to='mysite.Section'),
+            # error in default value set meant migration command was not completed
+            # manually changed default value
+            # need both default=None and null=True
+            field=models.ForeignKey(default=None, null=True, on_delete=django.db.models.deletion.CASCADE, to='mysite.Section'),
             preserve_default=False,
         ),
     ]
