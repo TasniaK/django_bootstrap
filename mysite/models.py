@@ -42,10 +42,15 @@ class Page(models.Model):
     # any field that uses an FK, expects integer as default value
     # FK integer references field value (PK) of referenced model (Section)
     # After error in setting default field value, manually changed in migrations file
-    section_header = models.ForeignKey(Section, on_delete = models.CASCADE, default=1)
+    section_header = models.ForeignKey(Section, on_delete = models.CASCADE, default=1, related_name = "header")
+    section_about_me = models.ForeignKey(Section, on_delete = models.CASCADE, default=1, related_name = "about_me")
 
     # external_links
 
 # str() wrapped around self.section_header to fix exception "__str__ return non-string"
     def __str__(self):
         return str(self.section_header)
+
+    def __str__(self):
+        return str(self.section_about_me)
+
