@@ -61,10 +61,10 @@
     <!-- Header -->
     <header class="masthead d-flex">
       <div class="container text-center my-auto">
-        <h1 class="mb-1">{{  title  }}</h1>
+        <h1 class="mb-1">{{  page.section_header.title  }}</h1>
           <h3 class="mb-5">
               <!-- use field name of Page instance -->
-          <em>{{ tagline }}</em>
+          <em>{{ page.section_header.tagline }}</em>
         </h3>
         <footer class="footer text-center">
         <div class="links-container">
@@ -89,7 +89,7 @@
 
         <div/>
         </footer>
-        <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">{{  scroll_button  }}</a>
+        <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">{{  page.section_header.scroll_button  }}</a>
       </div>
       <div class="overlay"></div>
     </header>

@@ -18,6 +18,7 @@ from django.db import models
 # in model have parameters for each page item (fields) e.g. title, text, images
 
 class Section(models.Model):
+    # change small text data to StringField()
     title = models.TextField()
     tagline = models.TextField()
     content = models.TextField()
@@ -27,21 +28,13 @@ class Section(models.Model):
     # background =
 
     def __str__(self):
-        return self.title
-
-    def __str__(self):
-        return self.tagline
-
-    def __str__(self):
-        return self.content
-
-    def __str__(self):
-        return self.scroll_button
+        return str("name:" + self.title + " id:" + str(self.id))
 
 class Page(models.Model):
     # any field that uses an FK, expects integer as default value
     # FK integer references field value (PK) of referenced model (Section)
     # After error in setting default field value, manually changed in migrations file
+    name = models.CharField(max_length=100)
     section_header = models.ForeignKey(Section, on_delete = models.CASCADE, default=1, related_name = "header")
     section_about_me = models.ForeignKey(Section, on_delete = models.CASCADE, default=1, related_name = "about_me")
 
@@ -49,8 +42,7 @@ class Page(models.Model):
 
 # str() wrapped around self.section_header to fix exception "__str__ return non-string"
     def __str__(self):
-        return str(self.section_header)
+        return str(self.name + " ID:" + str(self.id))
 
-    def __str__(self):
-        return str(self.section_about_me)
+
 
