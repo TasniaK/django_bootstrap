@@ -19,10 +19,10 @@ from django.db import models
 
 class Section(models.Model):
     # change small text data to StringField()
-    title = models.TextField()
-    tagline = models.TextField()
+    title = models.CharField(max_length=100)
+    tagline = models.CharField(max_length=100)
     content = models.TextField()
-    scroll_button = models.TextField()
+    scroll_button = models.CharField(max_length=100)
     # section_background =
     # page_image =
     # background =
@@ -40,7 +40,7 @@ class Page(models.Model):
 
     # external_links
 
-# str() wrapped around self.section_header to fix exception "__str__ return non-string"
+# str() wrapped around self.id to fix exception "__str__ return non-string"
     def __str__(self):
         return str(self.name + " ID:" + str(self.id))
 
