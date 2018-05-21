@@ -36,7 +36,10 @@ class Page(models.Model):
     # After error in setting default field value, manually changed in migrations file
     name = models.CharField(max_length=100)
     section_header = models.ForeignKey(Section, on_delete = models.CASCADE, default=1, related_name = "header")
-    section_about_me = models.ForeignKey(Section, on_delete = models.CASCADE, default=1, related_name = "about_me")
+    section_about_me = models.ForeignKey(Section, on_delete = models.CASCADE, default=2, related_name = "about_me")
+    section_portfolio = models.ForeignKey(Section, on_delete=models.CASCADE, default=3, related_name="portfolio")
+    section_chemistry_projects = models.ForeignKey(Section, on_delete=models.CASCADE, default=4, related_name="chemistry_projects")
+    section_cheerleading = models.ForeignKey(Section, on_delete=models.CASCADE, default=5, related_name="cheerleading")
 
     # external_links
 

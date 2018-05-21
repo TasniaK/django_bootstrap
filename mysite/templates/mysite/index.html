@@ -99,10 +99,9 @@
       <div class="container text-center">
         <div class="row">
           <div class="col-lg-10 mx-auto">
-            <h2>About Me</h2>
-            <p class="lead mb-5">I graduated in MSci Pharmaceutical Chemistry and have self-taught myself to code in python and have now started working on my first websites. I've cheerleaded for 3 years and currently cheer with <a class="social-link" href="https://www.instagram.com/blackoutevolutioncheer/">Blackout Evolution<a/>. I also dabble in gymnastics through cheerleading. This website is a project to help track my progress in these areas of interest.
-            </p>
-            <a class="btn btn-dark btn-xl js-scroll-trigger" href="#portfolio">My Projects</a>
+            <h2>{{ page.section_about_me.title }}</h2>
+            <p class="lead mb-5">{{ page.section_about_me.content }}</p>
+            <a class="btn btn-dark btn-xl js-scroll-trigger" href="#portfolio">{{ page.section_about_me.scroll_button }}</a>
           </div>
         </div>
       </div>
@@ -113,8 +112,8 @@
     <section class="content-section" id="portfolio">
       <div class="container">
         <div class="content-section-heading text-center">
-          <h3 class="text-secondary mb-0">Portfolio</h3>
-          <h2 class="mb-5">Recent Projects</h2>
+          <h3 class="text-secondary mb-0">{{ page.section_portfolio.title }}</h3>
+          <h2 class="mb-5">{{ page.section_portfolio.tagline }}</h2>
         </div>
         <div class="row no-gutters">
           <div class="col-lg-6">
@@ -170,8 +169,8 @@
     <section class="content-section bg-primary text-white text-center" id="chemistry-projects">
       <div class="container">
         <div class="content-section-heading">
-          <h3 class="text-secondary mb-0">Chemistry Projects</h3>
-          <h2 class="mb-5">MSci Pharmaceutical Chemistry</h2>
+          <h3 class="text-secondary mb-0">{{ page.section_chemistry_projects.title }}</h3>
+          <h2 class="mb-5">{{ page.section_chemistry_projects.tagline }}</h2>
         </div>
         <div class="row">
           <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
@@ -217,10 +216,8 @@
     <!-- Cheerleading callout -->
     <section class="callout" id="cheerleading">
       <div class="container text-center">
-        <h2 class="mx-auto mb-5">Did you know Cheerleading is a
-          <em>competitive sport</em>
-          ?</h2>
-        <a class="btn btn-primary btn-xl" href="cheerleading_page.html">Click to find out more!</a>
+        <h2 class="mx-auto mb-5">{{ page.section_cheerleading.content }}</h2>
+        <a class="btn btn-primary btn-xl" href="cheerleading_page.html">{{ page.section_cheerleading.scroll_button }}</a>
       </div>
     </section>
 
