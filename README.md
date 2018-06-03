@@ -3,11 +3,13 @@ django_bootstrap
 
 ## Setup
 
-make setup
+virtualenv venv
+source venv/bin/activate
+pip install
 
 ## Starting server
 
-make run
-# tasnia_kamal_site
+python manage.py runserver
+
 # tasnia_kamal_site
 # django_bootstrap
