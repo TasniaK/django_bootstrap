@@ -4,7 +4,9 @@ django_bootstrap
 ## Setup
 
 virtualenv venv
+
 source venv/bin/activate
+
 pip install
 
 ## Starting server
