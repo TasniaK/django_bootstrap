@@ -132,7 +132,7 @@ USE_TZ = True
 # static_root is more useful when there is more that one app with a dir for each static file per app.
 # staticfiles_dirs is where all static file pathways are stored
 STATIC_URL = '/static/'
-STATIC_ROOT = ''
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_DIRS = (
     # same logic as using base_dir
     os.path.join(BASE_DIR, 'static/'),
