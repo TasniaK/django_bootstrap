@@ -24,12 +24,9 @@ class IndexView(View):
             # use id=1 as this is first page instance so id=1
             # .__dict__ makes Page instance into dictionary as loaded page expects a dictionary not Page instance
             context = {}
-            #pdb.set_trace()
             page_data = Page.objects.get(name='Home Page')
             section_data = Section.objects.all()
             context['page'] = page_data
-            context['section'] = section_data
-            print page_data.section_header
 
 
         # ObjectDoesNotExist is a django exception
