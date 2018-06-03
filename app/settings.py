@@ -24,9 +24,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '@4u!dc-0^10a%t9(rdpmci5vi4)*fskkj*-(+r^(a3q5#37b8k'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = [u'0.0.0.0', u'tasniakamal2018.herokuapp.com']
+ALLOWED_HOSTS = [u'0.0.0.0', u'tasniakamal.herokuapp.com']
 
 
 # Application definition
@@ -77,21 +77,25 @@ WSGI_APPLICATION = 'app.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        #'ENGINE': 'django.db.backends.sqlite3',
-        #'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'tasniakamal',
-        # username and password defaults to empty string if environment variable doesn't exist
-        'USER': os.environ.get("MYAPP_DB_USER", ''),
-        'PASSWORD': os.environ.get("MYAPP_DB_PASSWORD", ''),
-        'HOST': '',
-        'PORT': '',
+if DEBUG:
+    DATABASES = {
+        'default': {
+            #'ENGINE': 'django.db.backends.sqlite3',
+            #'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+            'ENGINE': 'django.db.backends.postgresql_psycopg2',
+            'NAME': 'tasniakamal',
+            # username and password defaults to empty string if environment variable doesn't exist
+            'USER': os.environ.get("MYAPP_DB_USER", ''),
+            'PASSWORD': os.environ.get("MYAPP_DB_PASSWORD", ''),
+            'HOST': '',
+            'PORT': '',
+        }
     }
-}
 
-DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)
+else:
+    DATABASES = {
+        'default': dj_database_url.config(conn_max_age=600, ssl_require=True)
+    }
 
 # Password validation
 # https://docs.djangoproject.com/en/1.11/ref/settings/#auth-password-validators
