@@ -59,3 +59,9 @@ class CheerleadingView(View):
 
     def get(self, request):
         return render(request, self.template_name, {})
+
+class AnimationView(View):
+    template_name = 'mysite/animation.html'
+
+    def get(self, request):
+        return render(request, self.template_name, {})

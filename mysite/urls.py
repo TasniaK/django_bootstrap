@@ -9,9 +9,11 @@ app_name = 'mysite'
 # index regex, if it starts and ends with nothing, go to this view
 urlpatterns = [
     url(r'^$', views.IndexView.as_view(), name='index'),
-    url(r'^[l-p]{4}[_][a-p]{3}[_][a-p]{4}/$', views.PollAppView.as_view(), name='poll_app_page'),
-    url(r'^[c-n]{4}[_][b-o]{4}/$', views.ChemBlogView.as_view(), name='chem_blog'),
-    url(r'^[a-t]{9}[_][c-t]{7}[_][a-p]{4}/$', views.BootstrapProjectView.as_view(), name='bootstrap_project_page'),
-    url(r'^[a-r]{12}[_][a-p]{4}/$', views.CheerleadingView.as_view(), name='cheerleading_page'),
+    url("animation", views.AnimationView.as_view(), name='animation'),
+    url("poll_app_page", views.PollAppView.as_view(), name='poll_app_page'),
+    url("chem_blog", views.ChemBlogView.as_view(), name='chem_blog'),
+    url("bootstrap_project_page", views.BootstrapProjectView.as_view(), name='bootstrap_project_page'),
+    url("cheerleading_page", views.CheerleadingView.as_view(), name='cheerleading_page'),
 
 ]
+
