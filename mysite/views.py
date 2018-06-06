@@ -36,3 +36,26 @@ class IndexView(View):
 
         return render(request, self.template_name, context)
 
+class PollAppView(View):
+    template_name = 'mysite/poll_app_page.html'
+
+    def get (self, request):
+        return render(request, self.template_name, {})
+
+class ChemBlogView(View):
+    template_name = 'mysite/chem_blog.html'
+
+    def get(self, request):
+        return render(request, self.template_name, {})
+
+class BootstrapProjectView(View):
+    template_name = 'mysite/bootstrap_project_page.html'
+
+    def get(self, request):
+        return render(request, self.template_name, {})
+
+class CheerleadingView(View):
+    template_name = 'mysite/cheerleading_page.html'
+
+    def get(self, request):
+        return render(request, self.template_name, {})
