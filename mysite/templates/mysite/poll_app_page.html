@@ -1,0 +1,124 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Web Poll Application</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="{% static "vendor/bootstrap/css/bootstrap.min.css" %}" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="{% static "vendor/font-awesome/css/font-awesome.min.css" %}" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="{% static "vendor/simple-line-icons/css/simple-line-icons.css" %}" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="{% static "css/stylish-portfolio.css" %}" rel="stylesheet">
+
+
+  </head>
+
+
+  <body class="first-website" id="page-top">
+    <!-- Navigation -->
+    <a class="menu-toggle rounded" href="#">
+      <i class="fa fa-bars"></i>
+    </a>
+    <nav id="sidebar-wrapper">
+      <ul class="sidebar-nav">
+        <li class="sidebar-brand">
+          <a class="js-scroll-trigger" href="/#page-top">Tasnia Kamal</a>
+        </li>
+        <li class="sidebar-nav-item">
+          <a class="js-scroll-trigger" href="/#page-top">Home</a>
+            <ul>
+                <li class="sidebar-nav-item"><a class="js-scroll-trigger" href="/#about">About</a></li>
+                <li class="sidebar-nav-item"><a class="js-scroll-trigger" href="/#portfolio">Portfolio</a></li>
+                <li class="sidebar-nav-item"><a class="js-scroll-trigger" href="/#chemistry-projects">Chemistry Projects</a></li>
+                <li class="sidebar-nav-item"><a class="js-scroll-trigger" href="/#cheerleading">Cheerleading</a></li>
+            </ul>
+        </li>
+        <li class="sidebar-nav-item">
+          <a class="js-scroll-trigger" href="/poll_app_page">Web Poll Application</a>
+        </li>
+        <li class="sidebar-nav-item">
+          <a class="js-scroll-trigger" href="/bootstrap_project_page">Bootstrap Project</a>
+        </li>
+        <li class="sidebar-nav-item">
+          <a class="js-scroll-trigger" href="/chem_blog">Chem Blog</a>
+        </li>
+        <li class="sidebar-nav-item">
+          <a class="js-scroll-trigger" href="/cheerleading_page">Cheerleading</a>
+        </li>
+        <li class="sidebar-nav-item">
+          <a class="js-scroll-trigger" href="/animation">Javascript Animation</a>
+        </li>
+      </ul>
+    </nav>
+
+
+      <!-- Screenshots -->
+    <header class="poll-app-bg">
+      <div class="first-website">
+        <div class="content-section-heading text-center">
+          <h2 class="text-tertiary mb-0">Web Poll Application</h2>
+            <h3 class="mb-5">A focus on backend development using Django</h3>
+        </div>
+    </header>
+        <div class="row no-gutters">
+          <div class="col-lg-6">
+            <img class="django-screenshot" src="{% static "img/portfolio-polls1.png" %}" alt="poll app question page">
+          </div>
+          <div class="col-lg-6">
+            <img class="django-screenshot" src="{% static "img/portfolio-polls2.png" %}" alt="poll app question and selected vote">
+          </div>
+          <div class="col-lg-6">
+            <img class="django-screenshot" src="{% static "img/portfolio-polls3.png" %}" alt="poll app results page">
+          </div>
+          <div class="col-lg-6">
+            <img class="django-screenshot" src="{% static "img/portfolio-polls4.png" %}" alt="poll app return to question with option to vote again">
+          </div>
+        </div>
+      </div>
+
+    <!--Text -->
+    <div class="poll-app-bg-half">
+        <div class="container text-center">
+            <p class="lead mb-5">This was the first application I made where a user arrives at the poll questions page, selects a question, selects an answer from set choices and then is taken to a results view where the total votes per choice are displayed. Users can then click to <em>Vote Again</em>. I also have an admin page where questions and choices can be viewed, edited and created.</p>
+            <a class="btn btn-tertiary btn-xl" href="https://github.com/TasniaK/django">View Code</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer text-center">
+      <div class="container">
+        <p class="text-muted small mb-0">Copyright &copy; Tasnia Kamal 2018</p>
+      </div>
+    </footer>
+
+
+ <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded js-scroll-trigger" href="#page-top">
+      <i class="fa fa-angle-up"></i>
+    </a>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="{% static "vendor/jquery/jquery.min.js" %}"></script>
+    <script src="{% static "vendor/bootstrap/js/bootstrap.bundle.min.js" %}"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="{% static "vendor/jquery-easing/jquery.easing.min.js" %}"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="{% static "js/stylish-portfolio.min.js" %}"></script>
+
+  </body>
+
+</html>
