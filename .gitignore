@@ -1,2 +1,5 @@
 *.pyc
 venv
+.coverage
+.vscode/
+.DS_Store
