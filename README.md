@@ -4,6 +4,9 @@
 
 ## Setup
 
+Installation dependencies:
+* libmemcached
+
 ```commandline
 virtualenv venv
 source venv/bin/activate
